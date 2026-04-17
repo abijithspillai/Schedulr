@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,7 +91,8 @@
 
         /* --- Simulator Styles (Shared) --- */
         .simulator-view {
-            display: none; /* Hidden by default */
+            display: none;
+            /* Hidden by default */
             max-width: 900px;
             width: 100%;
             background: white;
@@ -121,7 +123,7 @@
             cursor: pointer;
             transition: background 0.2s;
         }
-        
+
         .back-btn:hover {
             background: #f1f5f9;
             color: #0f172a;
@@ -154,14 +156,16 @@
             margin-bottom: 4px;
         }
 
-        .input-group input, .input-group textarea, .input-group select {
+        .input-group input,
+        .input-group textarea,
+        .input-group select {
             padding: 8px 12px;
             border: 1px solid #cbd5e1;
             border-radius: 6px;
             font-size: 0.95rem;
             font-family: inherit;
         }
-        
+
         .input-group textarea {
             resize: vertical;
             min-height: 80px;
@@ -181,14 +185,35 @@
             transition: background 0.2s;
         }
 
-        .btn-primary { background: var(--primary); color: white; }
-        .btn-primary:hover { background: #1d4ed8; }
-        
-        .btn-danger { background: #ef4444; color: white; }
-        .btn-danger:hover { background: #dc2626; }
-        
-        .btn-success { background: #10b981; color: white; width: 100%; margin-top: 10px; font-size: 1.1rem; }
-        .btn-success:hover { background: #059669; }
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+        }
+
+        .btn-danger {
+            background: #ef4444;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #dc2626;
+        }
+
+        .btn-success {
+            background: #10b981;
+            color: white;
+            width: 100%;
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+
+        .btn-success:hover {
+            background: #059669;
+        }
 
         /* Table */
         table {
@@ -198,7 +223,8 @@
             font-size: 0.95rem;
         }
 
-        th, td {
+        th,
+        td {
             padding: 12px;
             text-align: center;
             border-bottom: 1px solid #e2e8f0;
@@ -235,13 +261,16 @@
             font-weight: bold;
             font-size: 0.85rem;
             position: relative;
-            border-right: 1px solid rgba(255,255,255,0.3);
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
             transition: filter 0.2s;
             box-sizing: border-box;
         }
-        
-        .gantt-block:hover { filter: brightness(1.1); z-index: 5; }
-        
+
+        .gantt-block:hover {
+            filter: brightness(1.1);
+            z-index: 5;
+        }
+
         .gantt-block.idle {
             background: repeating-linear-gradient(45deg, #cbd5e1, #cbd5e1 10px, #e2e8f0 10px, #e2e8f0 20px);
             color: #64748b;
@@ -257,8 +286,17 @@
             align-items: center;
         }
 
-        .tick { width: 1px; height: 8px; background: #94a3b8; }
-        .time-val { font-size: 0.75rem; color: #64748b; margin-top: 2px; }
+        .tick {
+            width: 1px;
+            height: 8px;
+            background: #94a3b8;
+        }
+
+        .time-val {
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-top: 2px;
+        }
 
         /* Stats & Outputs */
         .stats-grid {
@@ -275,9 +313,18 @@
             text-align: center;
             border: 1px solid #bfdbfe;
         }
-        
-        .stat-box h2 { margin: 0; color: var(--primary); font-size: 1.8rem; }
-        .stat-box p { margin: 5px 0 0; color: #64748b; font-size: 0.9rem; }
+
+        .stat-box h2 {
+            margin: 0;
+            color: var(--primary);
+            font-size: 1.8rem;
+        }
+
+        .stat-box p {
+            margin: 5px 0 0;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
 
         .result-box {
             background: #f8fafc;
@@ -290,13 +337,41 @@
             font-size: 1rem;
         }
 
-        .safe-text { color: #10b981; font-weight: bold; font-size: 1.2rem;}
-        .unsafe-text { color: #ef4444; font-weight: bold; font-size: 1.2rem;}
+        .safe-text {
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .unsafe-text {
+            color: #ef4444;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
 
         /* Animations */
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
         /* Tooltip */
         .tooltip {
             visibility: hidden;
@@ -312,13 +387,18 @@
             transform: translateX(-50%);
             white-space: nowrap;
             font-size: 0.75rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             opacity: 0;
             transition: opacity 0.2s;
         }
-        .gantt-block:hover .tooltip { visibility: visible; opacity: 1; }
+
+        .gantt-block:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
     </style>
 </head>
+
 <body>
 
     <div id="landing-page">
@@ -346,6 +426,10 @@
             <div class="algo-card" onclick="loadCpuSimulator('PRIORITY')">
                 <h3>Priority</h3>
                 <p>Priority Based (Lower # = Higher)</p>
+            </div>
+            <div class="algo-card" onclick="loadCpuSimulator('PRIORITY_PREEMPTIVE')">
+                <h3>Priority (Preemptive)</h3>
+                <p>Preemptive Priority Based (Lower # = Higher)</p>
             </div>
         </div>
 
@@ -381,16 +465,25 @@
                 <label>Burst Time</label>
                 <input type="number" id="bt" min="1" placeholder="1">
             </div>
-            
+
             <div class="input-group extra-input" id="priority-input" style="flex:0; min-width: 100px;">
                 <label>Priority</label>
                 <input type="number" id="prio" min="1" placeholder="1">
             </div>
 
+            <div class="input-group extra-input" id="priority-type-input" style="flex:0; min-width: 120px;">
+                <label>Priority Rule</label>
+                <select id="prio-type">
+                    <option value="LOWER">Low # = High Prio</option>
+                    <option value="HIGHER">High # = High Prio</option>
+                </select>
+            </div>
+
             <button class="btn btn-primary" onclick="addProcess()">Add Process</button>
             <button class="btn btn-danger" onclick="resetCpuData()">Reset</button>
 
-            <div class="input-group extra-input" id="quantum-input" style="width: 100%; border-top: 1px solid #e2e8f0; margin-top: 10px; padding-top: 10px; flex-direction: row; align-items: center; justify-content: center; gap: 10px;">
+            <div class="input-group extra-input" id="quantum-input"
+                style="width: 100%; border-top: 1px solid #e2e8f0; margin-top: 10px; padding-top: 10px; flex-direction: row; align-items: center; justify-content: center; gap: 10px;">
                 <label style="margin:0; font-size: 1rem;">Time Quantum:</label>
                 <input type="number" id="quantum" min="1" value="2" style="width: 60px;">
             </div>
@@ -436,8 +529,9 @@
             <h2 style="margin:0;">Banker's Algorithm</h2>
             <button class="btn back-btn" onclick="goBack()">← Back to Menu</button>
         </div>
-        
-        <p style="color: var(--secondary); font-size: 0.9rem;">Enter matrices with spaces between numbers and new lines for each process.</p>
+
+        <p style="color: var(--secondary); font-size: 0.9rem;">Enter matrices with spaces between numbers and new lines
+            for each process.</p>
 
         <div class="controls" style="align-items: flex-start;">
             <div class="input-group">
@@ -453,7 +547,7 @@
                 <input type="text" id="avail-vector" placeholder="3 3 2">
             </div>
         </div>
-        
+
         <div style="display: flex; gap: 10px;">
             <button class="btn btn-success" style="margin-top:0;" onclick="calculateBankers()">Check Safety</button>
             <button class="btn btn-danger" onclick="resetBankers()">Clear</button>
@@ -507,101 +601,103 @@
         </div>
     </div>
 
-<script>
-    const colors = ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899', '#06b6d4'];
+    <script>
+        const colors = ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899', '#06b6d4'];
 
-    /* --- UI NAVIGATION --- */
-    function hideAllSimulators() {
-        document.querySelectorAll('.simulator-view').forEach(el => el.style.display = 'none');
-    }
+        /* --- UI NAVIGATION --- */
+        function hideAllSimulators() {
+            document.querySelectorAll('.simulator-view').forEach(el => el.style.display = 'none');
+        }
 
-    function goBack() {
-        hideAllSimulators();
-        document.getElementById('landing-page').style.display = 'block';
-    }
+        function goBack() {
+            hideAllSimulators();
+            document.getElementById('landing-page').style.display = 'block';
+        }
 
-    /* ==========================================
-       CPU SCHEDULING LOGIC
-       ========================================== */
-    let currentCpuAlgo = '';
-    let cpuProcesses = [];
-    let pidCounter = 1;
+        /* ==========================================
+           CPU SCHEDULING LOGIC
+           ========================================== */
+        let currentCpuAlgo = '';
+        let cpuProcesses = [];
+        let pidCounter = 1;
 
-    function loadCpuSimulator(algo) {
-        currentCpuAlgo = algo;
-        document.getElementById('landing-page').style.display = 'none';
-        hideAllSimulators();
-        document.getElementById('cpu-simulator').style.display = 'block';
-        
-        const titles = {
-            'FCFS': 'First Come First Serve',
-            'SJF': 'Shortest Job First (Non-Preemptive)',
-            'SRTF': 'Shortest Remaining Time First (Preemptive)',
-            'RR': 'Round Robin Scheduling',
-            'PRIORITY': 'Priority Scheduling (Non-Preemptive)'
-        };
-        document.getElementById('algo-title').innerText = titles[algo];
+        function loadCpuSimulator(algo) {
+            currentCpuAlgo = algo;
+            document.getElementById('landing-page').style.display = 'none';
+            hideAllSimulators();
+            document.getElementById('cpu-simulator').style.display = 'block';
 
-        document.getElementById('priority-input').style.display = (algo === 'PRIORITY') ? 'flex' : 'none';
-        document.getElementById('quantum-input').style.display = (algo === 'RR') ? 'flex' : 'none';
+            const titles = {
+                'FCFS': 'First Come First Serve',
+                'SJF': 'Shortest Job First (Non-Preemptive)',
+                'SRTF': 'Shortest Remaining Time First (Preemptive)',
+                'RR': 'Round Robin Scheduling',
+                'PRIORITY': 'Priority Scheduling (Non-Preemptive)',
+                'PRIORITY_PREEMPTIVE': 'Priority Scheduling (Preemptive)'
+            };
+            document.getElementById('algo-title').innerText = titles[algo];
 
-        const headerRow = document.getElementById('table-head-row');
-        if (algo === 'PRIORITY') {
-            if (!headerRow.querySelector('.th-prio')) {
-                const th = document.createElement('th');
-                th.className = 'th-prio';
-                th.innerText = 'Priority';
-                headerRow.insertBefore(th, headerRow.children[3]); 
+            document.getElementById('priority-input').style.display = (algo === 'PRIORITY' || algo === 'PRIORITY_PREEMPTIVE') ? 'flex' : 'none';
+            document.getElementById('priority-type-input').style.display = (algo === 'PRIORITY' || algo === 'PRIORITY_PREEMPTIVE') ? 'flex' : 'none';
+            document.getElementById('quantum-input').style.display = (algo === 'RR') ? 'flex' : 'none';
+
+            const headerRow = document.getElementById('table-head-row');
+            if (algo === 'PRIORITY' || algo === 'PRIORITY_PREEMPTIVE') {
+                if (!headerRow.querySelector('.th-prio')) {
+                    const th = document.createElement('th');
+                    th.className = 'th-prio';
+                    th.innerText = 'Priority';
+                    headerRow.insertBefore(th, headerRow.children[3]);
+                }
+            } else {
+                const th = headerRow.querySelector('.th-prio');
+                if (th) th.remove();
             }
-        } else {
-            const th = headerRow.querySelector('.th-prio');
-            if (th) th.remove();
-        }
-        resetCpuData();
-    }
-
-    function addProcess() {
-        const at = parseInt(document.getElementById('at').value);
-        const bt = parseInt(document.getElementById('bt').value);
-        const prio = parseInt(document.getElementById('prio').value) || 1;
-
-        if (isNaN(at) || isNaN(bt) || at < 0 || bt <= 0) {
-            alert("Invalid Input");
-            return;
+            resetCpuData();
         }
 
-        const p = {
-            id: 'P' + pidCounter++,
-            at: at,
-            bt: bt,
-            priority: prio,
-            color: colors[(pidCounter - 2) % colors.length], 
-            remainingTime: bt,
-            ct: 0, tat: 0, wt: 0
-        };
+        function addProcess() {
+            const at = parseInt(document.getElementById('at').value);
+            const bt = parseInt(document.getElementById('bt').value);
+            const prio = parseInt(document.getElementById('prio').value) || 1;
 
-        cpuProcesses.push(p);
-        renderCpuTable();
-        
-        document.getElementById('at').value = '';
-        document.getElementById('bt').value = '';
-        document.getElementById('at').focus();
-    }
+            if (isNaN(at) || isNaN(bt) || at < 0 || bt <= 0) {
+                alert("Invalid Input");
+                return;
+            }
 
-    function resetCpuData() {
-        cpuProcesses = [];
-        pidCounter = 1;
-        document.getElementById('cpu-results').style.display = 'none';
-        renderCpuTable();
-    }
+            const p = {
+                id: 'P' + pidCounter++,
+                at: at,
+                bt: bt,
+                priority: prio,
+                color: colors[(pidCounter - 2) % colors.length],
+                remainingTime: bt,
+                ct: 0, tat: 0, wt: 0
+            };
 
-    function renderCpuTable() {
-        const tbody = document.querySelector('#processTable tbody');
-        tbody.innerHTML = '';
+            cpuProcesses.push(p);
+            renderCpuTable();
 
-        cpuProcesses.forEach(p => {
-            let priorityCell = (currentCpuAlgo === 'PRIORITY') ? `<td>${p.priority}</td>` : '';
-            tbody.innerHTML += `
+            document.getElementById('at').value = '';
+            document.getElementById('bt').value = '';
+            document.getElementById('at').focus();
+        }
+
+        function resetCpuData() {
+            cpuProcesses = [];
+            pidCounter = 1;
+            document.getElementById('cpu-results').style.display = 'none';
+            renderCpuTable();
+        }
+
+        function renderCpuTable() {
+            const tbody = document.querySelector('#processTable tbody');
+            tbody.innerHTML = '';
+
+            cpuProcesses.forEach(p => {
+                let priorityCell = (currentCpuAlgo === 'PRIORITY' || currentCpuAlgo === 'PRIORITY_PREEMPTIVE') ? `<td>${p.priority}</td>` : '';
+                tbody.innerHTML += `
                 <tr>
                     <td>${p.id}</td>
                     <td>${p.at}</td>
@@ -612,439 +708,502 @@
                     <td>${p.wt || '-'}</td>
                 </tr>
             `;
-        });
-    }
+            });
+        }
 
-    function calculateCpu() {
-        if (cpuProcesses.length === 0) return alert("Add processes!");
+        function calculateCpu() {
+            if (cpuProcesses.length === 0) return alert("Add processes!");
 
-        cpuProcesses.forEach(p => p.remainingTime = p.bt);
-        let ganttData = [];
-        
-        if (currentCpuAlgo === 'FCFS') solveFCFS(ganttData);
-        else if (currentCpuAlgo === 'SJF') solveSJF(ganttData);
-        else if (currentCpuAlgo === 'SRTF') solveSRTF(ganttData);
-        else if (currentCpuAlgo === 'PRIORITY') solvePriority(ganttData);
-        else if (currentCpuAlgo === 'RR') solveRR(ganttData);
+            cpuProcesses.forEach(p => p.remainingTime = p.bt);
+            let ganttData = [];
 
-        renderGantt(ganttData);
-        updateCpuStats();
-        renderCpuTable(); 
-        document.getElementById('cpu-results').style.display = 'block';
-    }
+            if (currentCpuAlgo === 'FCFS') solveFCFS(ganttData);
+            else if (currentCpuAlgo === 'SJF') solveSJF(ganttData);
+            else if (currentCpuAlgo === 'SRTF') solveSRTF(ganttData);
+            else if (currentCpuAlgo === 'PRIORITY') solvePriority(ganttData);
+            else if (currentCpuAlgo === 'PRIORITY_PREEMPTIVE') solvePriorityPreemptive(ganttData);
+            else if (currentCpuAlgo === 'RR') solveRR(ganttData);
 
-    function solveFCFS(gantt) {
-        let time = 0;
-        let queue = [...cpuProcesses].sort((a,b) => a.at - b.at);
+            renderGantt(ganttData);
+            updateCpuStats();
+            renderCpuTable();
+            document.getElementById('cpu-results').style.display = 'block';
+        }
 
-        queue.forEach(p => {
-            if (time < p.at) {
-                gantt.push({ type: 'idle', start: time, end: p.at, duration: p.at - time });
-                time = p.at;
-            }
-            gantt.push({ type: 'proc', id: p.id, start: time, end: time + p.bt, duration: p.bt, color: p.color, data: p });
-            time += p.bt;
-            p.ct = time;
-            p.tat = p.ct - p.at;
-            p.wt = p.tat - p.bt;
-        });
-    }
+        function solveFCFS(gantt) {
+            let time = 0;
+            let queue = [...cpuProcesses].sort((a, b) => a.at - b.at);
 
-    function solveSJF(gantt) {
-        let time = 0, completed = 0, n = cpuProcesses.length;
-        let isCompleted = new Array(n).fill(false);
-
-        while (completed < n) {
-            let idx = -1, minBt = Infinity;
-            for (let i = 0; i < n; i++) {
-                if (cpuProcesses[i].at <= time && !isCompleted[i]) {
-                    if (cpuProcesses[i].bt < minBt) {
-                        minBt = cpuProcesses[i].bt;
-                        idx = i;
-                    } else if (cpuProcesses[i].bt === minBt) {
-                        if (idx === -1 || cpuProcesses[i].at < cpuProcesses[idx].at) idx = i;
-                    }
+            queue.forEach(p => {
+                if (time < p.at) {
+                    gantt.push({ type: 'idle', start: time, end: p.at, duration: p.at - time });
+                    time = p.at;
                 }
-            }
-
-            if (idx !== -1) {
-                let p = cpuProcesses[idx];
-                gantt.push({ type: 'proc', id: p.id, start: time, end: time + p.bt, duration: p.bt, color: p.color });
+                gantt.push({ type: 'proc', id: p.id, start: time, end: time + p.bt, duration: p.bt, color: p.color, data: p });
                 time += p.bt;
                 p.ct = time;
                 p.tat = p.ct - p.at;
                 p.wt = p.tat - p.bt;
-                isCompleted[idx] = true;
-                completed++;
-            } else {
-                let nextArrival = Infinity;
-                for(let i=0; i<n; i++) {
-                    if(!isCompleted[i] && cpuProcesses[i].at < nextArrival) nextArrival = cpuProcesses[i].at;
-                }
-                gantt.push({ type: 'idle', start: time, end: nextArrival, duration: nextArrival - time });
-                time = nextArrival;
-            }
+            });
         }
-    }
 
-    /* NEW: SRTF Logic */
-    function solveSRTF(gantt) {
-        let time = 0, completed = 0, n = cpuProcesses.length;
-        let currentProc = null;
-        let blockStart = 0;
+        function solveSJF(gantt) {
+            let time = 0, completed = 0, n = cpuProcesses.length;
+            let isCompleted = new Array(n).fill(false);
 
-        while (completed < n) {
-            let idx = -1;
-            let minRt = Infinity;
-            
-            for (let i = 0; i < n; i++) {
-                if (cpuProcesses[i].at <= time && cpuProcesses[i].remainingTime > 0) {
-                    if (cpuProcesses[i].remainingTime < minRt) {
-                        minRt = cpuProcesses[i].remainingTime;
-                        idx = i;
-                    } else if (cpuProcesses[i].remainingTime === minRt) {
-                        if (idx === -1 || cpuProcesses[i].at < cpuProcesses[idx].at) idx = i;
+            while (completed < n) {
+                let idx = -1, minBt = Infinity;
+                for (let i = 0; i < n; i++) {
+                    if (cpuProcesses[i].at <= time && !isCompleted[i]) {
+                        if (cpuProcesses[i].bt < minBt) {
+                            minBt = cpuProcesses[i].bt;
+                            idx = i;
+                        } else if (cpuProcesses[i].bt === minBt) {
+                            if (idx === -1 || cpuProcesses[i].at < cpuProcesses[idx].at) idx = i;
+                        }
                     }
                 }
-            }
 
-            if (idx !== -1) {
-                let p = cpuProcesses[idx];
-                
-                // Context switch or starting first process
-                if (currentProc !== p) {
-                    if (currentProc !== null) {
-                        gantt.push({ type: 'proc', id: currentProc.id, start: blockStart, end: time, duration: time - blockStart, color: currentProc.color });
-                    } else if (time > blockStart) {
-                        gantt.push({ type: 'idle', start: blockStart, end: time, duration: time - blockStart });
-                    }
-                    currentProc = p;
-                    blockStart = time;
-                }
-
-                p.remainingTime--;
-                time++;
-
-                if (p.remainingTime === 0) {
-                    completed++;
+                if (idx !== -1) {
+                    let p = cpuProcesses[idx];
+                    gantt.push({ type: 'proc', id: p.id, start: time, end: time + p.bt, duration: p.bt, color: p.color });
+                    time += p.bt;
                     p.ct = time;
                     p.tat = p.ct - p.at;
                     p.wt = p.tat - p.bt;
-                    
-                    gantt.push({ type: 'proc', id: p.id, start: blockStart, end: time, duration: time - blockStart, color: p.color });
-                    currentProc = null;
-                    blockStart = time;
+                    isCompleted[idx] = true;
+                    completed++;
+                } else {
+                    let nextArrival = Infinity;
+                    for (let i = 0; i < n; i++) {
+                        if (!isCompleted[i] && cpuProcesses[i].at < nextArrival) nextArrival = cpuProcesses[i].at;
+                    }
+                    gantt.push({ type: 'idle', start: time, end: nextArrival, duration: nextArrival - time });
+                    time = nextArrival;
                 }
-            } else {
-                if (currentProc !== null) {
-                    gantt.push({ type: 'proc', id: currentProc.id, start: blockStart, end: time, duration: time - blockStart, color: currentProc.color });
-                    currentProc = null;
-                    blockStart = time;
-                }
-                time++;
             }
         }
-    }
 
-    function solvePriority(gantt) {
-        let time = 0, completed = 0, n = cpuProcesses.length;
-        let isCompleted = new Array(n).fill(false);
+        /* NEW: SRTF Logic */
+        function solveSRTF(gantt) {
+            let time = 0, completed = 0, n = cpuProcesses.length;
+            let currentProc = null;
+            let blockStart = 0;
 
-        while (completed < n) {
-            let idx = -1, minPrio = Infinity; 
-            for (let i = 0; i < n; i++) {
-                if (cpuProcesses[i].at <= time && !isCompleted[i]) {
-                    if (cpuProcesses[i].priority < minPrio) {
-                        minPrio = cpuProcesses[i].priority;
-                        idx = i;
-                    } else if (cpuProcesses[i].priority === minPrio) {
-                         if (idx === -1 || cpuProcesses[i].at < cpuProcesses[idx].at) idx = i;
+            while (completed < n) {
+                let idx = -1;
+                let minRt = Infinity;
+
+                for (let i = 0; i < n; i++) {
+                    if (cpuProcesses[i].at <= time && cpuProcesses[i].remainingTime > 0) {
+                        if (cpuProcesses[i].remainingTime < minRt) {
+                            minRt = cpuProcesses[i].remainingTime;
+                            idx = i;
+                        } else if (cpuProcesses[i].remainingTime === minRt) {
+                            if (idx === -1 || cpuProcesses[i].at < cpuProcesses[idx].at) idx = i;
+                        }
                     }
                 }
-            }
 
-            if (idx !== -1) {
-                let p = cpuProcesses[idx];
-                gantt.push({ type: 'proc', id: p.id, start: time, end: time + p.bt, duration: p.bt, color: p.color });
-                time += p.bt;
-                p.ct = time;
-                p.tat = p.ct - p.at;
-                p.wt = p.tat - p.bt;
-                isCompleted[idx] = true;
-                completed++;
-            } else {
-                 let nextArrival = Infinity;
-                for(let i=0; i<n; i++) {
-                    if(!isCompleted[i] && cpuProcesses[i].at < nextArrival) nextArrival = cpuProcesses[i].at;
-                }
-                gantt.push({ type: 'idle', start: time, end: nextArrival, duration: nextArrival - time });
-                time = nextArrival;
-            }
-        }
-    }
+                if (idx !== -1) {
+                    let p = cpuProcesses[idx];
 
-    function solveRR(gantt) {
-        let quantum = parseInt(document.getElementById('quantum').value);
-        let time = 0;
-        let readyQueue = [];
-        let completedCount = 0;
-        let sortedProcs = [...cpuProcesses].sort((a,b) => a.at - b.at);
-        let index = 0; 
+                    // Context switch or starting first process
+                    if (currentProc !== p) {
+                        if (currentProc !== null) {
+                            gantt.push({ type: 'proc', id: currentProc.id, start: blockStart, end: time, duration: time - blockStart, color: currentProc.color });
+                        } else if (time > blockStart) {
+                            gantt.push({ type: 'idle', start: blockStart, end: time, duration: time - blockStart });
+                        }
+                        currentProc = p;
+                        blockStart = time;
+                    }
 
-        if (sortedProcs.length > 0 && sortedProcs[0].at > time) {
-            gantt.push({type:'idle', start:0, end: sortedProcs[0].at, duration: sortedProcs[0].at});
-            time = sortedProcs[0].at;
-        }
+                    p.remainingTime--;
+                    time++;
 
-        while (completedCount < cpuProcesses.length) {
-            while (index < sortedProcs.length && sortedProcs[index].at <= time) {
-                readyQueue.push(sortedProcs[index]);
-                index++;
-            }
+                    if (p.remainingTime === 0) {
+                        completed++;
+                        p.ct = time;
+                        p.tat = p.ct - p.at;
+                        p.wt = p.tat - p.bt;
 
-            if (readyQueue.length === 0) {
-                if (index < sortedProcs.length) {
-                    let nextTime = sortedProcs[index].at;
-                    gantt.push({type:'idle', start: time, end: nextTime, duration: nextTime - time});
-                    time = nextTime;
-                    continue;
-                } else { break; }
-            }
-
-            let p = readyQueue.shift();
-            let execTime = Math.min(quantum, p.remainingTime);
-            
-            gantt.push({ type: 'proc', id: p.id, start: time, end: time + execTime, duration: execTime, color: p.color });
-            
-            time += execTime;
-            p.remainingTime -= execTime;
-
-            while (index < sortedProcs.length && sortedProcs[index].at <= time) {
-                readyQueue.push(sortedProcs[index]);
-                index++;
-            }
-
-            if (p.remainingTime > 0) {
-                readyQueue.push(p);
-            } else {
-                completedCount++;
-                p.ct = time;
-                p.tat = p.ct - p.at;
-                p.wt = p.tat - p.bt;
-            }
-        }
-    }
-
-    function updateCpuStats() {
-        let totalTat = 0, totalWt = 0;
-        cpuProcesses.forEach(p => { totalTat += p.tat; totalWt += p.wt; });
-        document.getElementById('avgTat').innerText = (totalTat / cpuProcesses.length).toFixed(2);
-        document.getElementById('avgWt').innerText = (totalWt / cpuProcesses.length).toFixed(2);
-    }
-
-    function renderGantt(data) {
-        const chart = document.getElementById('gantt');
-        chart.innerHTML = '';
-        
-        data.forEach((block, i) => {
-            const div = document.createElement('div');
-            div.className = block.type === 'idle' ? 'gantt-block idle' : 'gantt-block';
-            div.style.flexGrow = block.duration;
-            div.style.flexBasis = '0';
-            
-            if (block.type !== 'idle') {
-                div.style.backgroundColor = block.color;
-                div.innerText = block.id;
-            } else {
-                div.innerText = 'Idle';
-            }
-
-            const startMark = document.createElement('div');
-            startMark.className = 'time-marker';
-            startMark.style.left = '0';
-            startMark.innerHTML = `<div class="tick"></div><span class="time-val">${block.start}</span>`;
-            div.appendChild(startMark);
-
-            if (i === data.length - 1) {
-                const endMark = document.createElement('div');
-                endMark.className = 'time-marker';
-                endMark.style.left = '100%';
-                endMark.innerHTML = `<div class="tick"></div><span class="time-val">${block.end}</span>`;
-                div.appendChild(endMark);
-            }
-
-            if(block.type !== 'idle') {
-                const tt = document.createElement('div');
-                tt.className = 'tooltip';
-                tt.innerHTML = `${block.id}<br>Start: ${block.start} | End: ${block.end}<br>Dur: ${block.duration}`;
-                div.appendChild(tt);
-            }
-            chart.appendChild(div);
-        });
-    }
-
-    /* ==========================================
-       BANKER'S ALGORITHM LOGIC
-       ========================================== */
-    function loadBankersSimulator() {
-        document.getElementById('landing-page').style.display = 'none';
-        hideAllSimulators();
-        document.getElementById('bankers-simulator').style.display = 'block';
-    }
-
-    function resetBankers() {
-        document.getElementById('alloc-matrix').value = '';
-        document.getElementById('max-matrix').value = '';
-        document.getElementById('avail-vector').value = '';
-        document.getElementById('bankers-results').style.display = 'none';
-    }
-
-    function parseMatrix(str) {
-        return str.trim().split('\n').map(row => row.trim().split(/\s+/).map(Number));
-    }
-
-    function calculateBankers() {
-        try {
-            const allocStr = document.getElementById('alloc-matrix').value;
-            const maxStr = document.getElementById('max-matrix').value;
-            const availStr = document.getElementById('avail-vector').value;
-
-            if(!allocStr || !maxStr || !availStr) throw new Error("Please fill all inputs.");
-
-            const alloc = parseMatrix(allocStr);
-            const max = parseMatrix(maxStr);
-            const avail = availStr.trim().split(/\s+/).map(Number);
-
-            const n = alloc.length; // processes
-            const m = avail.length; // resources
-
-            if(max.length !== n) throw new Error("Allocation and Max matrices must have the same number of processes (rows).");
-
-            let need = [];
-            for (let i = 0; i < n; i++) {
-                need[i] = [];
-                if(alloc[i].length !== m || max[i].length !== m) throw new Error("Columns in matrices must match number of resources.");
-                for (let j = 0; j < m; j++) {
-                    need[i][j] = max[i][j] - alloc[i][j];
+                        gantt.push({ type: 'proc', id: p.id, start: blockStart, end: time, duration: time - blockStart, color: p.color });
+                        currentProc = null;
+                        blockStart = time;
+                    }
+                } else {
+                    if (currentProc !== null) {
+                        gantt.push({ type: 'proc', id: currentProc.id, start: blockStart, end: time, duration: time - blockStart, color: currentProc.color });
+                        currentProc = null;
+                        blockStart = time;
+                    }
+                    time++;
                 }
             }
+        }
 
-            let work = [...avail];
-            let finish = new Array(n).fill(false);
-            let safeSequence = [];
-            let count = 0;
+        function solvePriority(gantt) {
+            let time = 0, completed = 0, n = cpuProcesses.length;
+            let isCompleted = new Array(n).fill(false);
+            let prioType = document.getElementById('prio-type').value;
 
-            while (count < n) {
-                let found = false;
+            while (completed < n) {
+                let idx = -1, bestPrio = (prioType === 'LOWER') ? Infinity : -Infinity;
                 for (let i = 0; i < n; i++) {
-                    if (!finish[i]) {
-                        let canAllocate = true;
-                        for (let j = 0; j < m; j++) {
-                            if (need[i][j] > work[j]) {
-                                canAllocate = false;
-                                break;
+                    if (cpuProcesses[i].at <= time && !isCompleted[i]) {
+                        let condition = (prioType === 'LOWER') ? (cpuProcesses[i].priority < bestPrio) : (cpuProcesses[i].priority > bestPrio);
+                        if (condition) {
+                            bestPrio = cpuProcesses[i].priority;
+                            idx = i;
+                        } else if (cpuProcesses[i].priority === bestPrio) {
+                            if (idx === -1 || cpuProcesses[i].at < cpuProcesses[idx].at) idx = i;
+                        }
+                    }
+                }
+
+                if (idx !== -1) {
+                    let p = cpuProcesses[idx];
+                    gantt.push({ type: 'proc', id: p.id, start: time, end: time + p.bt, duration: p.bt, color: p.color });
+                    time += p.bt;
+                    p.ct = time;
+                    p.tat = p.ct - p.at;
+                    p.wt = p.tat - p.bt;
+                    isCompleted[idx] = true;
+                    completed++;
+                } else {
+                    let nextArrival = Infinity;
+                    for (let i = 0; i < n; i++) {
+                        if (!isCompleted[i] && cpuProcesses[i].at < nextArrival) nextArrival = cpuProcesses[i].at;
+                    }
+                    gantt.push({ type: 'idle', start: time, end: nextArrival, duration: nextArrival - time });
+                    time = nextArrival;
+                }
+            }
+        }
+
+        function solvePriorityPreemptive(gantt) {
+            let time = 0, completed = 0, n = cpuProcesses.length;
+            let currentProc = null;
+            let blockStart = 0;
+            let prioType = document.getElementById('prio-type').value;
+
+            while (completed < n) {
+                let idx = -1;
+                let bestPrio = (prioType === 'LOWER') ? Infinity : -Infinity;
+
+                for (let i = 0; i < n; i++) {
+                    if (cpuProcesses[i].at <= time && cpuProcesses[i].remainingTime > 0) {
+                        let condition = (prioType === 'LOWER') ? (cpuProcesses[i].priority < bestPrio) : (cpuProcesses[i].priority > bestPrio);
+                        if (condition) {
+                            bestPrio = cpuProcesses[i].priority;
+                            idx = i;
+                        } else if (cpuProcesses[i].priority === bestPrio) {
+                            if (idx === -1 || cpuProcesses[i].at < cpuProcesses[idx].at) idx = i;
+                        }
+                    }
+                }
+
+                if (idx !== -1) {
+                    let p = cpuProcesses[idx];
+
+                    // Context switch or starting first process
+                    if (currentProc !== p) {
+                        if (currentProc !== null) {
+                            gantt.push({ type: 'proc', id: currentProc.id, start: blockStart, end: time, duration: time - blockStart, color: currentProc.color });
+                        } else if (time > blockStart) {
+                            gantt.push({ type: 'idle', start: blockStart, end: time, duration: time - blockStart });
+                        }
+                        currentProc = p;
+                        blockStart = time;
+                    }
+
+                    p.remainingTime--;
+                    time++;
+
+                    if (p.remainingTime === 0) {
+                        completed++;
+                        p.ct = time;
+                        p.tat = p.ct - p.at;
+                        p.wt = p.tat - p.bt;
+
+                        gantt.push({ type: 'proc', id: p.id, start: blockStart, end: time, duration: time - blockStart, color: p.color });
+                        currentProc = null;
+                        blockStart = time;
+                    }
+                } else {
+                    if (currentProc !== null) {
+                        gantt.push({ type: 'proc', id: currentProc.id, start: blockStart, end: time, duration: time - blockStart, color: currentProc.color });
+                        currentProc = null;
+                        blockStart = time;
+                    }
+                    time++;
+                }
+            }
+        }
+
+        function solveRR(gantt) {
+            let quantum = parseInt(document.getElementById('quantum').value);
+            let time = 0;
+            let readyQueue = [];
+            let completedCount = 0;
+            let sortedProcs = [...cpuProcesses].sort((a, b) => a.at - b.at);
+            let index = 0;
+
+            if (sortedProcs.length > 0 && sortedProcs[0].at > time) {
+                gantt.push({ type: 'idle', start: 0, end: sortedProcs[0].at, duration: sortedProcs[0].at });
+                time = sortedProcs[0].at;
+            }
+
+            while (completedCount < cpuProcesses.length) {
+                while (index < sortedProcs.length && sortedProcs[index].at <= time) {
+                    readyQueue.push(sortedProcs[index]);
+                    index++;
+                }
+
+                if (readyQueue.length === 0) {
+                    if (index < sortedProcs.length) {
+                        let nextTime = sortedProcs[index].at;
+                        gantt.push({ type: 'idle', start: time, end: nextTime, duration: nextTime - time });
+                        time = nextTime;
+                        continue;
+                    } else { break; }
+                }
+
+                let p = readyQueue.shift();
+                let execTime = Math.min(quantum, p.remainingTime);
+
+                gantt.push({ type: 'proc', id: p.id, start: time, end: time + execTime, duration: execTime, color: p.color });
+
+                time += execTime;
+                p.remainingTime -= execTime;
+
+                while (index < sortedProcs.length && sortedProcs[index].at <= time) {
+                    readyQueue.push(sortedProcs[index]);
+                    index++;
+                }
+
+                if (p.remainingTime > 0) {
+                    readyQueue.push(p);
+                } else {
+                    completedCount++;
+                    p.ct = time;
+                    p.tat = p.ct - p.at;
+                    p.wt = p.tat - p.bt;
+                }
+            }
+        }
+
+        function updateCpuStats() {
+            let totalTat = 0, totalWt = 0;
+            cpuProcesses.forEach(p => { totalTat += p.tat; totalWt += p.wt; });
+            document.getElementById('avgTat').innerText = (totalTat / cpuProcesses.length).toFixed(2);
+            document.getElementById('avgWt').innerText = (totalWt / cpuProcesses.length).toFixed(2);
+        }
+
+        function renderGantt(data) {
+            const chart = document.getElementById('gantt');
+            chart.innerHTML = '';
+
+            data.forEach((block, i) => {
+                const div = document.createElement('div');
+                div.className = block.type === 'idle' ? 'gantt-block idle' : 'gantt-block';
+                div.style.flexGrow = block.duration;
+                div.style.flexBasis = '0';
+
+                if (block.type !== 'idle') {
+                    div.style.backgroundColor = block.color;
+                    div.innerText = block.id;
+                } else {
+                    div.innerText = 'Idle';
+                }
+
+                const startMark = document.createElement('div');
+                startMark.className = 'time-marker';
+                startMark.style.left = '0';
+                startMark.innerHTML = `<div class="tick"></div><span class="time-val">${block.start}</span>`;
+                div.appendChild(startMark);
+
+                if (i === data.length - 1) {
+                    const endMark = document.createElement('div');
+                    endMark.className = 'time-marker';
+                    endMark.style.left = '100%';
+                    endMark.innerHTML = `<div class="tick"></div><span class="time-val">${block.end}</span>`;
+                    div.appendChild(endMark);
+                }
+
+                if (block.type !== 'idle') {
+                    const tt = document.createElement('div');
+                    tt.className = 'tooltip';
+                    tt.innerHTML = `${block.id}<br>Start: ${block.start} | End: ${block.end}<br>Dur: ${block.duration}`;
+                    div.appendChild(tt);
+                }
+                chart.appendChild(div);
+            });
+        }
+
+        /* ==========================================
+           BANKER'S ALGORITHM LOGIC
+           ========================================== */
+        function loadBankersSimulator() {
+            document.getElementById('landing-page').style.display = 'none';
+            hideAllSimulators();
+            document.getElementById('bankers-simulator').style.display = 'block';
+        }
+
+        function resetBankers() {
+            document.getElementById('alloc-matrix').value = '';
+            document.getElementById('max-matrix').value = '';
+            document.getElementById('avail-vector').value = '';
+            document.getElementById('bankers-results').style.display = 'none';
+        }
+
+        function parseMatrix(str) {
+            return str.trim().split('\n').map(row => row.trim().split(/\s+/).map(Number));
+        }
+
+        function calculateBankers() {
+            try {
+                const allocStr = document.getElementById('alloc-matrix').value;
+                const maxStr = document.getElementById('max-matrix').value;
+                const availStr = document.getElementById('avail-vector').value;
+
+                if (!allocStr || !maxStr || !availStr) throw new Error("Please fill all inputs.");
+
+                const alloc = parseMatrix(allocStr);
+                const max = parseMatrix(maxStr);
+                const avail = availStr.trim().split(/\s+/).map(Number);
+
+                const n = alloc.length; // processes
+                const m = avail.length; // resources
+
+                if (max.length !== n) throw new Error("Allocation and Max matrices must have the same number of processes (rows).");
+
+                let need = [];
+                for (let i = 0; i < n; i++) {
+                    need[i] = [];
+                    if (alloc[i].length !== m || max[i].length !== m) throw new Error("Columns in matrices must match number of resources.");
+                    for (let j = 0; j < m; j++) {
+                        need[i][j] = max[i][j] - alloc[i][j];
+                    }
+                }
+
+                let work = [...avail];
+                let finish = new Array(n).fill(false);
+                let safeSequence = [];
+                let count = 0;
+
+                while (count < n) {
+                    let found = false;
+                    for (let i = 0; i < n; i++) {
+                        if (!finish[i]) {
+                            let canAllocate = true;
+                            for (let j = 0; j < m; j++) {
+                                if (need[i][j] > work[j]) {
+                                    canAllocate = false;
+                                    break;
+                                }
+                            }
+                            if (canAllocate) {
+                                for (let j = 0; j < m; j++) work[j] += alloc[i][j];
+                                safeSequence.push(`P${i}`);
+                                finish[i] = true;
+                                found = true;
+                                count++;
                             }
                         }
-                        if (canAllocate) {
-                            for (let j = 0; j < m; j++) work[j] += alloc[i][j];
-                            safeSequence.push(`P${i}`);
-                            finish[i] = true;
-                            found = true;
-                            count++;
+                    }
+                    if (!found) break; // unsafe
+                }
+
+                const resBox = document.getElementById('bankers-results');
+                resBox.style.display = 'block';
+
+                if (count === n) {
+                    resBox.innerHTML = `<span class="safe-text">System is in a SAFE state.</span>\n\nSafe Sequence: <br>${safeSequence.join(' ➔ ')}`;
+                } else {
+                    resBox.innerHTML = `<span class="unsafe-text">System is UNSAFE! Deadlock may occur.</span>`;
+                }
+
+            } catch (e) {
+                alert("Error in input formatting: " + e.message);
+            }
+        }
+
+        /* ==========================================
+           MEMORY ALLOCATION LOGIC
+           ========================================== */
+        function loadMemorySimulator() {
+            document.getElementById('landing-page').style.display = 'none';
+            hideAllSimulators();
+            document.getElementById('memory-simulator').style.display = 'block';
+        }
+
+        function resetMemory() {
+            document.getElementById('mem-blocks').value = '';
+            document.getElementById('mem-procs').value = '';
+            document.getElementById('memory-results').style.display = 'none';
+        }
+
+        function calculateMemory() {
+            const blocksInput = document.getElementById('mem-blocks').value;
+            const procsInput = document.getElementById('mem-procs').value;
+            const algo = document.getElementById('mem-algo').value;
+
+            if (!blocksInput || !procsInput) return alert("Please fill block and process sizes.");
+
+            let blocks = blocksInput.split(',').map(n => parseInt(n.trim()));
+            let procs = procsInput.split(',').map(n => parseInt(n.trim()));
+
+            let allocation = new Array(procs.length).fill(-1);
+            let blockRemaining = [...blocks];
+
+            for (let i = 0; i < procs.length; i++) {
+                let targetIdx = -1;
+
+                if (algo === 'FIRST') {
+                    for (let j = 0; j < blocks.length; j++) {
+                        if (blockRemaining[j] >= procs[i]) {
+                            targetIdx = j;
+                            break;
+                        }
+                    }
+                } else if (algo === 'BEST') {
+                    let bestFit = Infinity;
+                    for (let j = 0; j < blocks.length; j++) {
+                        if (blockRemaining[j] >= procs[i] && blockRemaining[j] < bestFit) {
+                            bestFit = blockRemaining[j];
+                            targetIdx = j;
+                        }
+                    }
+                } else if (algo === 'WORST') {
+                    let worstFit = -1;
+                    for (let j = 0; j < blocks.length; j++) {
+                        if (blockRemaining[j] >= procs[i] && blockRemaining[j] > worstFit) {
+                            worstFit = blockRemaining[j];
+                            targetIdx = j;
                         }
                     }
                 }
-                if (!found) break; // unsafe
-            }
 
-            const resBox = document.getElementById('bankers-results');
-            resBox.style.display = 'block';
-            
-            if (count === n) {
-                resBox.innerHTML = `<span class="safe-text">System is in a SAFE state.</span>\n\nSafe Sequence: <br>${safeSequence.join(' ➔ ')}`;
-            } else {
-                resBox.innerHTML = `<span class="unsafe-text">System is UNSAFE! Deadlock may occur.</span>`;
-            }
-
-        } catch (e) {
-            alert("Error in input formatting: " + e.message);
-        }
-    }
-
-    /* ==========================================
-       MEMORY ALLOCATION LOGIC
-       ========================================== */
-    function loadMemorySimulator() {
-        document.getElementById('landing-page').style.display = 'none';
-        hideAllSimulators();
-        document.getElementById('memory-simulator').style.display = 'block';
-    }
-
-    function resetMemory() {
-        document.getElementById('mem-blocks').value = '';
-        document.getElementById('mem-procs').value = '';
-        document.getElementById('memory-results').style.display = 'none';
-    }
-
-    function calculateMemory() {
-        const blocksInput = document.getElementById('mem-blocks').value;
-        const procsInput = document.getElementById('mem-procs').value;
-        const algo = document.getElementById('mem-algo').value;
-
-        if(!blocksInput || !procsInput) return alert("Please fill block and process sizes.");
-
-        let blocks = blocksInput.split(',').map(n => parseInt(n.trim()));
-        let procs = procsInput.split(',').map(n => parseInt(n.trim()));
-
-        let allocation = new Array(procs.length).fill(-1);
-        let blockRemaining = [...blocks];
-
-        for (let i = 0; i < procs.length; i++) {
-            let targetIdx = -1;
-
-            if (algo === 'FIRST') {
-                for (let j = 0; j < blocks.length; j++) {
-                    if (blockRemaining[j] >= procs[i]) {
-                        targetIdx = j;
-                        break;
-                    }
-                }
-            } else if (algo === 'BEST') {
-                let bestFit = Infinity;
-                for (let j = 0; j < blocks.length; j++) {
-                    if (blockRemaining[j] >= procs[i] && blockRemaining[j] < bestFit) {
-                        bestFit = blockRemaining[j];
-                        targetIdx = j;
-                    }
-                }
-            } else if (algo === 'WORST') {
-                let worstFit = -1;
-                for (let j = 0; j < blocks.length; j++) {
-                    if (blockRemaining[j] >= procs[i] && blockRemaining[j] > worstFit) {
-                        worstFit = blockRemaining[j];
-                        targetIdx = j;
-                    }
+                if (targetIdx !== -1) {
+                    allocation[i] = targetIdx;
+                    blockRemaining[targetIdx] -= procs[i];
                 }
             }
 
-            if (targetIdx !== -1) {
-                allocation[i] = targetIdx;
-                blockRemaining[targetIdx] -= procs[i];
-            }
+            renderMemoryTable(procs, allocation, blockRemaining);
         }
 
-        renderMemoryTable(procs, allocation, blockRemaining);
-    }
+        function renderMemoryTable(procs, allocation, blockRemaining) {
+            const tbody = document.querySelector('#memoryTable tbody');
+            tbody.innerHTML = '';
 
-    function renderMemoryTable(procs, allocation, blockRemaining) {
-        const tbody = document.querySelector('#memoryTable tbody');
-        tbody.innerHTML = '';
+            for (let i = 0; i < procs.length; i++) {
+                let blockAllocated = allocation[i] !== -1 ? `Block ${allocation[i] + 1}` : '<span style="color:#ef4444; font-weight:bold;">Not Allocated</span>';
+                let rem = allocation[i] !== -1 ? blockRemaining[allocation[i]] : '-';
 
-        for (let i = 0; i < procs.length; i++) {
-            let blockAllocated = allocation[i] !== -1 ? `Block ${allocation[i] + 1}` : '<span style="color:#ef4444; font-weight:bold;">Not Allocated</span>';
-            let rem = allocation[i] !== -1 ? blockRemaining[allocation[i]] : '-';
-            
-            tbody.innerHTML += `
+                tbody.innerHTML += `
                 <tr>
                     <td>P${i + 1}</td>
                     <td>${procs[i]}</td>
@@ -1052,10 +1211,11 @@
                     <td>${rem}</td>
                 </tr>
             `;
+            }
+            document.getElementById('memory-results').style.display = 'block';
         }
-        document.getElementById('memory-results').style.display = 'block';
-    }
 
-</script>
+    </script>
 </body>
+
 </html>
